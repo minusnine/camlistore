@@ -63,9 +63,9 @@ func init() {
 }
 
 const (
-	clientIdDat     = "client-id.dat"
-	clientSecretDat = "client-secret.dat"
-	helpEnableAuth  = `Enable authentication: in your project console, navigate to "APIs and auth", "Credentials", click on "Create new Client ID", and pick "Installed application", with type "Other". Copy the CLIENT ID to ` + clientIdDat + `, and the CLIENT SECRET to ` + clientSecretDat
+	clientIDDAT     = "client-id.dat"
+	clientSecretDAT = "client-secret.dat"
+	helpEnableAuth  = `Enable authentication: in your project console, navigate to the "API Manager", "Credentials", select "OAuth client ID", and pick application type "Other". Copy the CLIENT ID to ` + clientIDDAT + `, and the CLIENT SECRET to ` + clientSecretDAT
 )
 
 func (c *gceCmd) Describe() string {
@@ -176,7 +176,7 @@ func readFile(v string) string {
 	if err != nil {
 		if os.IsNotExist(err) {
 			msg := fmt.Sprintf("%v does not exist.", v)
-			if v == clientIdDat || v == clientSecretDat {
+			if v == clientIDDAT || v == clientSecretDAT {
 				msg = fmt.Sprintf("%v\n%s", msg, helpEnableAuth)
 			}
 			log.Fatal(msg)

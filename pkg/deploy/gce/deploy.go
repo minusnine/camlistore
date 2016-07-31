@@ -67,7 +67,7 @@ const (
 
 	ConsoleURL          = "https://console.developers.google.com"
 	HelpCreateProject   = "Go to " + ConsoleURL + " to create a new Google Cloud project"
-	HelpEnableAPIs      = `Enable the project APIs: in your project console, navigate to "APIs and auth", "APIs". In the list, enable "Google Cloud Storage", "Google Cloud Storage JSON API", and "Google Compute Engine".`
+	HelpEnableAPIs      = `Enable the project APIs: in your project console, navigate to the "API Manager" and click "Enable API". In the list, enable "Google Cloud Storage", "Google Cloud Storage JSON API", and "Google Compute Engine".`
 	helpDeleteInstance  = `To delete an existing Compute Engine instance: in your project console, navigate to "Compute", "Compute Engine", and "VM instances". Select your instance and click "Delete".`
 	HelpManageSSHKeys   = `To manage/add SSH keys: in your project console, navigate to "Compute", "Compute Engine", and "VM instances". Click on your instance name. Scroll down to the SSH Keys section.`
 	HelpManageHTTPCreds = `To change your login and password: in your project console, navigate to "Compute", "Compute Engine", and "VM instances". Click on your instance name. Set camlistore-username and/or camlistore-password in the custom metadata section.`
